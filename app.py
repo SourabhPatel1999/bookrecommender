@@ -408,17 +408,19 @@ if tab == "Guess Me":
 
         flag = False
         if st.button("start"):
-            flag = True
+            st.write("Cannot connect to webcam")
+#             flag = True
 
-            dict = detect_age_gender(flag)
-            data = {'Gender': [dict["gender"]],
-                    'Age': [dict["age"]]}
-            df = pd.DataFrame(data)
-            my_table.dataframe(df)
-            cam.release()
-            cv2.destroyAllWindows()
-            st.session_state.age2 = dict["age"]
-            st.session_state.gender2 = dict["gender"]
+#             dict = detect_age_gender(flag)
+#             data = {'Gender': [dict["gender"]],
+#                     'Age': [dict["age"]]}
+#             df = pd.DataFrame(data)
+#             my_table.dataframe(df)
+#             cam.release()
+#             cv2.destroyAllWindows()
+#             st.session_state.age2 = dict["age"]
+#             st.session_state.gender2 = dict["gender"]
+                
     result_btn = st.button('result')
     if "result_state" not in st.session_state:
         st.session_state.result_state = False
